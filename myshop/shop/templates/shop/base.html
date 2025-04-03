@@ -1,4 +1,17 @@
 {% load static %}
+<!-- 
+  Diseño base que heredarán todas las páginas del e-commerce con:
+  1. Cabecera con logo/link al inicio
+  2. Subcabecera que muestra estado del carrito:
+     - Número de ítems y total cuando hay productos
+     - Mensaje "carrito vacío" cuando no hay items
+  3. Área de contenido dinámico (para sobreescribir en templates hijos)
+  4. Inclusión de hoja de estilos base.css
+  Características clave:
+  - Sistema de bloques (title/content) para extensión
+  - Mostrador interactivo del carrito
+  - Diseño limpio y semántico
+-->
 <!DOCTYPE html>
 <html>
   <head>

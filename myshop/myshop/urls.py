@@ -18,7 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+"""
+CONFIGURACIÓN PRINCIPAL DE URLS DEL PROYECTO DJANGO
 
+Estructura las rutas principales del proyecto y sus aplicaciones:
+1. Panel de administración (/admin/)
+2. Rutas del carrito de compras (/cart/)
+3. Gestión de pedidos (/orders/) 
+4. Páginas principales de la tienda (raíz /)
+
+En modo desarrollo (DEBUG=True), habilita servicio de archivos multimedia.
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls', namespace='cart')),

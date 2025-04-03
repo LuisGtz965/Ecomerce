@@ -3,9 +3,19 @@ from django.views.decorators.http import require_POST
 from shop.models import Product
 from .cart import Cart
 from .forms import CartAddProductForm
+"""
+VISTAS PARA LA GESTIÓN DEL CARRITO DE COMPRAS
 
-
+Implementa las operaciones básicas del carrito:
+- Añadir/actualizar productos
+- Eliminar productos
+- Mostrar resumen del carrito
+"""
 @require_POST
+# Añade un producto al carrito o actualiza su cantidad.
+# Solo acepta peticiones POST
+# Valida el formulario de cantidad
+# Redirige al resumen del carrito  
 def cart_add(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)

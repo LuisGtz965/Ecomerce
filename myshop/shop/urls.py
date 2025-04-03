@@ -1,6 +1,13 @@
 from django.urls import path
 from . import views
 
+"""
+Define las rutas principales del sistema de e-commerce con:
+- Vista de mapa interactivo
+- Listados de productos (general y por categoría)
+- Vista detallada de productos
+"""
+
 app_name = 'shop'
 
 urlpatterns = [

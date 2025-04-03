@@ -1,6 +1,13 @@
 {% extends "shop/base.html" %}
 {% load static %}
-
+<!-- 
+  PLANTILLA DE DETALLE DE PRODUCTO:
+  Muestra información completa de un producto con:
+  - Imagen principal (o imagen por defecto)
+  - Datos básicos (nombre, categoría, precio)
+  - Formulario para añadir al carrito
+  - Descripción formateada
+-->
 {% block title %}
   {{ product.name }}
 {% endblock %}

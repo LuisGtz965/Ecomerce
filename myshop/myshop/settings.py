@@ -30,6 +30,15 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+"""
+CONFIGURACIÓN PRINCIPAL DEL PROYECTO DJANGO (settings.py)
+
+Configuración base para una tienda online con:
+- Apps esenciales (shop, cart, orders)
+- Seguridad integrada
+- Base de datos SQLite
+- Gestión de archivos estáticos/media
+"""
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

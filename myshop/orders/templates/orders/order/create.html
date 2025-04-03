@@ -1,3 +1,17 @@
+<!-- 
+  Template de checkout/pago para tienda online:
+  1. Hereda de la plantilla base 'shop/base.html' (estructura común)
+  2. Muestra:
+     - Resumen del pedido (productos, cantidades y precios)
+     - Formulario de pago/envió generado automáticamente ({{ form.as_p }})
+     - Total general del carrito (cart.get_total_price)
+  3. Características:
+     - Bloque 'title' personalizado para la pestaña del navegador
+     - Bloque 'content' con:
+       * Lista de productos usando datos del carrito (contexto 'cart')
+       * Formulario seguro (POST + CSRF token)
+     - Diseño semántico con etiquetas HTML5
+-->
 {% extends "shop/base.html" %}
 
 {% block title %}
@@ -6,6 +20,7 @@
 
 {% block content %}
   <h1>Checkout</h1>
+<!-- Sección de resumen del pedido -->
   <div class="order-info">
     <h3>Your order</h3>
     <ul>
@@ -18,6 +33,7 @@
     </ul>
     <p>Total: ${{ cart.get_total_price }}</p>
   </div>
+<!-- Formulario de datos de envío/pago -->
   <form method="post" class="order-form">
     {{ form.as_p }}
     <p><input type="submit" value="Place order"></p>
